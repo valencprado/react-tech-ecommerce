@@ -1,12 +1,15 @@
 import * as React from 'react';
 import { Text, View, Image } from 'react-native';
-import {Button, Card} from 'react-native-elements';
+import {Button, Card, Divider} from 'react-native-elements';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { color } from 'react-native-reanimated';
 import { ScrollView } from 'react-native-gesture-handler';
 import styles from '../style/estilo';
+import { TextElement } from 'react-native-elements/dist/text/Text';
+import { Avatar } from "@rneui/base";
+
 
 // const sair = () => {
 //   navigation.reset({
@@ -19,7 +22,7 @@ import styles from '../style/estilo';
 
 function Computadores() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', display:'flex' }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', display:'flex', }}>
      
       <ScrollView style={{width:'100%'}}>
       <Card style={{width:'100px'}}>
@@ -31,7 +34,11 @@ function Computadores() {
     source={{uri:"https://a-static.mlcdn.com.br/800x560/monitor-led-195-hdmi-vga-widescreen-19-5-fox-fox-racer/foxonline/616/ba95e2c262a344f72096d7bdf5059170.jpg"}}
     />
      <Text>R$600,00</Text>
-     <Button title="Comprar" onPress={() => alert('Compra concluída!')}/>
+     <Button
+     title="Comprar" 
+     onPress={() => alert('Compra concluída!')}
+    
+     /> 
       </Card>  
 
       <Card>
@@ -43,6 +50,11 @@ function Computadores() {
     source={{uri:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.r3OBFHYuyBTZw_md4CXaqgHaHa%26pid%3DApi&f=1"}}
     />
      <Text>R$150,00</Text>
+     <Button
+     title="Comprar" 
+     onPress={() => alert('Compra concluída!')}
+    
+     />
       </Card>
       <Card>
      <Card.Title>Mousepad</Card.Title>
@@ -53,6 +65,11 @@ function Computadores() {
     source={{uri:"https://img.terabyteshop.com.br/produto/g/mousepad-gamer-rise-mode-grande-scorpion-red-rg-mp-05-sr_51200.jpg"}}
     />
      <Text>R$100,00</Text>
+     <Button
+     title="Comprar" 
+     onPress={() => alert('Compra concluída!')}
+    
+     />
       </Card>
       <Card>
      <Card.Title>Teclado</Card.Title>
@@ -63,6 +80,11 @@ function Computadores() {
         source={{uri:"https://static3.tcdn.com.br/img/img_prod/374123/teclado_mecanico_gamer_alloy_origins_rgb_switch_hyperx_red_abnt2_hx_kb6rdx_br_kingston_31933_3_20200817153406.jpg"}}
         /> 
      <Text>R$250,00</Text>
+     <Button
+     title="Comprar" 
+     onPress={() => alert('Compra concluída!')}
+    
+     />
       </Card> 
       <Card>
      <Card.Title>Gabinete</Card.Title>
@@ -73,6 +95,11 @@ function Computadores() {
         source={{uri:"https://www.oceanoinformatica.com.br/media/catalog/product/cache/1/thumbnail/2000x2000/9df78eab33525d08d6e5fb8d27136e95/2/0/2000000018710F5EF4F.jpg"}}
         />
      <Text>R$400,00</Text>
+     <Button
+     title="Comprar" 
+     onPress={() => alert('Compra concluída!')}
+    
+     />
       </Card>
       </ScrollView>
     </View>
@@ -92,6 +119,10 @@ function Jogos() {
      source={{uri:"https://hipertextual.com/wp-content/uploads/2021/05/GTA-5-1-scaled.jpg"}}
      />
      <Text>R$150</Text>
+      <Button
+      title="Comprar" 
+      onPress={() => alert('Compra concluída!')}
+      />
       </Card>  
       <Card>
      <Card.Title>Minecraft</Card.Title>
@@ -102,6 +133,10 @@ function Jogos() {
             source={{uri:"https://unblockedgames7766.com/wp-content/uploads/2021/03/minecraft-unblocked.jpg"}}
             />  
             <Text>R$100,00</Text>
+      <Button
+      title="Comprar" 
+      onPress={() => alert('Compra concluída!')}
+      />
       </Card>
       <Card>
      <Card.Title>Red Dead Redemption 2</Card.Title>
@@ -112,6 +147,10 @@ function Jogos() {
             source={{uri:"https://img.hype.games/cdn/2db186b8-c5bf-46d2-823b-8b11fbd31a5bRed-Dead-Redemption-2-Special-Edition-Cover.jpg"}}
             />
             <Text>R$250</Text>
+      <Button
+      title="Comprar" 
+      onPress={() => alert('Compra concluída!')}
+      />
       </Card>
       <Card>
      <Card.Title>Club Penguin</Card.Title>
@@ -122,6 +161,10 @@ function Jogos() {
             source={{uri:"http://2.bp.blogspot.com/-Zj_DUCH75aY/TbtGhx-jTSI/AAAAAAAAAkU/oKJV4doCnpI/s1600/52_lrg-1024.jpg"}}
             />
               <Text>R$50,00</Text>
+      <Button
+      title="Comprar" 
+      onPress={() => alert('Compra concluída!')}
+      />
       </Card> 
       <Card>
      <Card.Title>Goat Simulator</Card.Title>
@@ -132,8 +175,39 @@ function Jogos() {
             source={{uri:"https://1.bp.blogspot.com/-yD-gvp39psk/Xmw3SOF3wJI/AAAAAAAAEZA/lD_Xk-iT8GIY17r0qgpniD0Com9GKYhiACLcBGAsYHQ/s1600/4b658add449484c6cb298c48638e.png"}}
             />
             <Text> R$100,00</Text>
+      <Button
+      title="Comprar" 
+      onPress={() => alert('Compra concluída!')}
+      />
       </Card>
       </ScrollView>
+    </View>
+  );
+}
+
+function Profile(){
+  return(
+    <View style={{alignItems:'center'}}>
+      <Divider>
+      <Avatar
+      activeOpacity={0.2}
+      avatarStyle={{}}
+      containerStyle={{ backgroundColor: "#BDBDBD" }}
+      icon={{}}
+      iconStyle={{}}
+      imageProps={{}}
+      onLongPress={() => alert("Foto alterada.")}
+      onPress={() => alert("onPress")}
+      overlayContainerStyle={{}}
+      placeholderStyle={{}}
+      rounded
+      size="large"
+      source={{ uri: "" }}
+      title="C"
+      titleStyle={{}}
+      />
+      <Text h1>Nome</Text>
+      </Divider>
     </View>
   );
 }
@@ -171,14 +245,21 @@ export default function Principal() {
               ),
             }}
           />
+          <Tab.Screen
+          name="Perfil"
+          component={Profile}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="account" color={color} size={size} />
+              ),
+          }}
+          />
     </Tab.Navigator>
   );
 }
-// const specificStyle =StyleSheet.create({
-//   button:{
-//       width: "40px",
-//       margintop:10,
-//       backgroundColor:"#ffd100",
-//       color:"#fff"
-//   }
-// })
+//  const style =StyleSheet.create({
+//    button:{
+//        backgroundColor:"#ffd100",
+//        color:"#fff"
+//    }
+//  });
