@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Button, Input, Text } from 'react-native-elements';
+import { Button, Divider, Input, Text } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/estilo';
 
@@ -29,7 +29,8 @@ export default function Login({navigation}) {
 
   return (
     <View style={[styles.container, specificStyle.specificContainer]}>
-      
+      <Divider>
+
       <Text h2>Login</Text>
       <Input
         placeholder="E-mail"
@@ -43,33 +44,33 @@ export default function Login({navigation}) {
         onChangeText={value => setPassword(value)}
         secureTextEntry={true}
         />
-      
+      <br></br>
       <Button
         icon={
           <Icon
             name="check"
             size={15}
             color="white"
+            />
+          }
+          title="Entrar"
+          buttonStyle={specificStyle.button}
+          onPress={() => entrar()}
           />
-        }
-        title="Entrar"
-        buttonStyle={specificStyle.button}
-        onPress={() => entrar()}
-      />
-
-<Button
-  icon={
-    <Icon
-      name="user"
-      size={15}
-      color="white"
-     
-      />
-  }
-      title="Cadastrar"
-      buttonStyle={specificStyle.button}
-     onPress={() => Cadastro()}
-     />
+          <br></br>
+          <Button
+            icon={
+              <Icon
+              name="user"
+              size={15}
+              color="white"                
+           />
+              }
+              title="Cadastrar"
+              buttonStyle={specificStyle.button}
+              onPress={() => Cadastro()}
+              />
+  </Divider>
     </View>
   );
 }
@@ -82,7 +83,6 @@ const specificStyle =StyleSheet.create({
   },
   button:{
       width: "100%",
-      margintop:10,
       backgroundColor:"#33fee7"
   }
 })

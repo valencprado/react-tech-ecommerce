@@ -1,7 +1,7 @@
 import React,{ useState} from 'react';
 import {StyleSheet,View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Button, CheckBox, Input, Text } from 'react-native-elements';
+import { Button, Divider, Input, Text } from 'react-native-elements';
 import styles from '../style/estilo';
 
 
@@ -26,6 +26,7 @@ export default function Cadastro({navigation}) {
       }
     return (
         <View style={[styles.container, specificStyle.specificContainer]}>
+          <Divider>
          <Text h2>Cadastre-se!</Text>
         <Input
           placeholder="E-mail"
@@ -47,34 +48,37 @@ export default function Cadastro({navigation}) {
           secureTextEntry={true}
           />
   
-        
+        <br></br>
             <Button
                 icon={
-                    <Icon
-                    name="check"
-                    size={15}
-                    color="white"
-                    backgroundColor="c7fcee"
-                    />
+                  <Icon
+                  name="check"
+                  size={15}
+                  color="white"
+                  backgroundColor="c7fcee"
+                  />
                 }
                 title="Salvar"
                 buttonStyle={specificStyle.button}
                 onPress={()=> salvar()}
                 />
-<Button
+                <br></br>
+              <Button
                 icon={
-                    <Icon
-                    name="check"
-                    size={15}
-                    color="white"
-                    backgroundColor="c7fcee"
-                    />
+                  <Icon
+                  name="check"
+                  size={15}
+                  color="white"
+                  backgroundColor="c7fcee"
+                  />
                 }
                 title="Login"
                 buttonStyle={specificStyle.button}
                 onPress={()=> entrar()}
                 />
 
+                
+                </Divider>
         </View>
        
 
