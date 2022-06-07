@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text, View, Image } from 'react-native';
-import {Button, Card, Divider} from 'react-native-elements';
+import {Button, Card, Divider, StyleSheet} from 'react-native-elements';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -11,12 +11,12 @@ import { TextElement } from 'react-native-elements/dist/text/Text';
 import { Avatar } from "@rneui/base";
 
 
-// const sair = () => {
-//   navigation.reset({
-//       index: 0,
-//       routes: [{name: "Login"}]
-//   })
-// }
+const sair = () => {
+  navigation.reset({
+      index: 0,
+      routes: [{name: "Login"}]
+  })
+}
 
 
 
@@ -191,22 +191,19 @@ function Profile(){
       <Divider>
       <Avatar
       activeOpacity={0.2}
-      avatarStyle={{}}
       containerStyle={{ backgroundColor: "#BDBDBD" }}
-      icon={{}}
-      iconStyle={{}}
-      imageProps={{}}
       onLongPress={() => alert("Foto alterada.")}
-      onPress={() => alert("onPress")}
-      overlayContainerStyle={{}}
-      placeholderStyle={{}}
+      onPress={() => alert("Foto alterada.")}
       rounded
       size="large"
       source={{ uri: "" }}
       title="C"
-      titleStyle={{}}
       />
       <Text h1>Nome</Text>
+      <Button
+      onPress={() => sair()}
+      title="Sair"
+      />
       </Divider>
     </View>
   );
@@ -257,9 +254,9 @@ export default function Principal() {
     </Tab.Navigator>
   );
 }
-//  const style =StyleSheet.create({
-//    button:{
-//        backgroundColor:"#ffd100",
-//        color:"#fff"
-//    }
-//  });
+  // const style = StyleSheet.create({
+  //   button:{
+  //       backgroundColor:"#ffd100",
+  //       color:"#fff"
+  //   }
+  // });
