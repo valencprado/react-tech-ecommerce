@@ -30,48 +30,32 @@ export default function Cadastro({navigation}) {
          <Text h2>Cadastre-se!</Text>
         <Input
           placeholder="E-mail"
-          leftIcon={{ type: 'font-awesome', name: 'envelope' }}
           onChangeText={value => setEmail(value)}
           keyboardType="email-address"
+          style={specificStyle.input}
           />
         <Input
           placeholder="Nome"
-          leftIcon={{ type: 'font-awesome', name: 'lock' }}
           onChangeText={value => setNome(value)}
           secureTextEntry={true}
+          style={specificStyle.input}
           />
 
             <Input
           placeholder="CPF"
-          leftIcon={{ type: 'font-awesome', name: 'lock' }}
           onChangeText={value => setCpf(value)}
           secureTextEntry={true}
+          style={specificStyle.input}
           />
   
         <br></br>
             <Button
-                icon={
-                  <Icon
-                  name="check"
-                  size={15}
-                  color="white"
-                  backgroundColor="c7fcee"
-                  />
-                }
                 title="Salvar"
                 buttonStyle={specificStyle.button}
                 onPress={()=> salvar()}
                 />
                 <br></br>
               <Button
-                icon={
-                  <Icon
-                  name="check"
-                  size={15}
-                  color="white"
-                  backgroundColor="c7fcee"
-                  />
-                }
                 title="Login"
                 buttonStyle={specificStyle.button}
                 onPress={()=> entrar()}
@@ -91,10 +75,22 @@ const specificStyle =StyleSheet.create({
         padding:10
     },
     button:{
-        width: "100%",
-        margintop:10,
-        backgroundColor:"#012062"
-    }
+    
+      width: "100%",
+      backgroundColor:"#012062",
+      flex:1,
+      height:45,
+     
+  },
+  input:{
+        backgroundColor:"#FFF",
+        width:'100%',
+        color:"#222",
+        fontSize:17,
+        borderRadius: 7,
+        padding: 10,
+       
+  },
 })
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Image, KeyboardAvoidingView } from 'react-native';
 import { Button, Divider, Input, Text } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/estilo';
@@ -28,44 +28,31 @@ export default function Login({navigation}) {
   }
 
   return (
-    <View style={[styles.container, specificStyle.specificContainer]}>
+    <View style={[specificStyle.specificContainer]}>
       <Divider>
-
-      <Text h2>Login</Text>
+      <Text h2 style={{textAlign:'center'}}>Login</Text>
+      <br></br>
       <Input
         placeholder="E-mail"
-        leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+        autoCorrect={false}
         onChangeText={value => setEmail(value)}
         keyboardType="email-address"
+        style={specificStyle.input}
         />
       <Input
         placeholder="Senha"
-        leftIcon={{ type: 'font-awesome', name: 'lock' }}
         onChangeText={value => setPassword(value)}
         secureTextEntry={true}
+        style={specificStyle.input}
         />
       <br></br>
       <Button
-        icon={
-          <Icon
-            name="check"
-            size={15}
-            color="white"
-            />
-          }
           title="Entrar"
           buttonStyle={specificStyle.button}
           onPress={() => entrar()}
           />
           <br></br>
           <Button
-            icon={
-              <Icon
-              name="user"
-              size={15}
-              color="white"                
-           />
-              }
               title="Cadastrar"
               buttonStyle={specificStyle.button}
               onPress={() => Cadastro()}
@@ -77,12 +64,29 @@ export default function Login({navigation}) {
 
 
 const specificStyle =StyleSheet.create({
+  
   specificContainer:{
+      alignItems:'center',
+      justifyContent:'center',
       backgroundColor:"#c7fcee",
       padding:10,
+      flex:1,
   },
   button:{
+    
       width: "100%",
-      backgroundColor:"#33fee7"
-  }
+      backgroundColor:"#33fee7",
+      flex:1,
+      height:45,
+     
+  },
+  input:{
+        backgroundColor:"#FFF",
+        width:'100%',
+        color:"#222",
+        fontSize:17,
+        borderRadius: 7,
+        padding: 10,
+       
+  },
 })
